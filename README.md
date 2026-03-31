@@ -1,15 +1,23 @@
-# 🖋️ Warm Ink — A Home Assistant Theme
+# Warm Ink — A Home Assistant Theme
 
-<!-- Preview images go here -->
-<img src="Images/Warm Ink theme2.png"/>
+<img src="Images/warm_ink_theme.png"/>
 
----
+</br>
 
 A warm, grounded Home Assistant theme built around earthy neutrals and a signature terra cotta accent. Inspired by the [Anthropic / Claude](https://www.anthropic.com) color palette — designed to feel calm and deliberate rather than loud.
 
 Available in both **light** and **dark** mode.
 
----
+## Preview
+<details>
+<summary>Screenshots</summary>
+<img src="Images/warm_ink_dashboard_light.png"/>
+<img src="Images/warm_ink_dashboard_dark.png"/>
+<img src="Images/warm_ink_devtools_light.png"/>
+<img src="Images/warm_ink_devtools_dark.png"/>
+<img src="Images/warm_ink_automations_light.png"/>
+<img src="Images/warm_ink_automations_dark.png"/>
+</details>
 
 ## The Palette
 
@@ -27,7 +35,6 @@ Warm Ink draws its colors from a palette of warm grays, off-whites, and a burnt-
 | Sky | `#6a9bcc` | Accent blue — cool states, info |
 | Fern | `#788c5d` | Success and nature states |
 
----
 
 ## Installation
 
@@ -50,7 +57,6 @@ Warm Ink draws its colors from a palette of warm grays, off-whites, and a burnt-
 5. Reload themes: go to **Developer Tools → Actions**, search for `frontend.reload_themes`, and run it.
 6. Open your [Profile settings](https://my.home-assistant.io/redirect/profile), scroll to **Browser Settings**, and select **Warm Ink** (light or dark) from the Theme dropdown.
 
----
 
 ### Manual Installation
 
@@ -69,13 +75,11 @@ Warm Ink draws its colors from a palette of warm grays, off-whites, and a burnt-
 
 5. Open your [Profile settings](https://my.home-assistant.io/redirect/profile), scroll to **Browser Settings**, and select **Warm Ink** from the Theme dropdown.
 
----
 
 ## Light & Dark Mode
 
 Warm Ink ships as a single file with both modes defined. Home Assistant will automatically offer both variants on the profile page. The active mode follows your browser or OS preference by default, or you can pin it manually from your profile.
 
----
 
 ## License
 
