@@ -1,0 +1,636 @@
+# =============================================================
+#  WARM INK (CLAUDE INSPIRED) THEME FOR HOME ASSISTANT
+#  Based on the official Anthropic / Claude brand color palette
+# =============================================================
+
+Warm Ink:
+
+  # -------------------------------------------------------------------
+  # 1. BRAND PALETTE
+  # -------------------------------------------------------------------
+
+  # Core neutrals
+  claude-ink:         "#141413"
+  claude-charcoal:    "#3a3936"
+  claude-stone:       "#6b6960"
+  claude-sand:        "#b0aea5"
+  claude-linen:       "#e8e6dc"
+  claude-cream:       "#faf9f5"
+
+  # Primary — terra cotta / orange scale
+  claude-ember:       "#7a3520"
+  claude-rust:        "#9e4a2e"
+  claude-sienna:      "#b85e3d"
+  claude-terra:       "#d97757"
+  claude-clay:        "#e9a080"
+  claude-blush:       "#f0c4b0"
+  claude-petal:       "#faeee8"
+
+  # Accent — blue scale
+  claude-ocean:       "#3d6a94"
+  claude-sky:         "#6a9bcc"
+  claude-mist:        "#a8c7e8"
+  claude-haze:        "#e0eef8"
+
+  # Status — green scale (brand green + derived shades)
+  claude-grove:       "#4a5c32"
+  claude-fern:        "#788c5d"
+  claude-sage:        "#a8bf8a"
+  claude-dew:         "#e8f0dd"
+
+  # Status — red (standard, kept for accessibility)
+  claude-crimson:     "#c0392b"
+  claude-rose:        "#e07070"
+  claude-flush:       "#fdeaea"
+
+  # RGB triplets for variables that need rgba() support
+  claude-terra-rgb:   "217, 119, 87"
+  claude-sky-rgb:     "106, 155, 204"
+  claude-fern-rgb:    "120, 140, 93"
+  claude-cream-rgb:   "250, 249, 245"
+  claude-ink-rgb:     "20, 20, 19"
+  claude-crimson-rgb: "192, 57, 43"
+
+
+  # -------------------------------------------------------------------
+  # 2. CORE HA COLOR SCALE  (ha-color-*-05 to -95)
+  # -------------------------------------------------------------------
+
+  # Primary scale — terra cotta
+  ha-color-primary-05: "rgb(122, 53, 32)"
+  ha-color-primary-10: "rgb(140, 62, 38)"
+  ha-color-primary-20: "rgb(158, 74, 46)"
+  ha-color-primary-30: "rgb(184, 94, 61)"
+  ha-color-primary-40: "rgb(217, 119, 87)"
+  ha-color-primary-50: "rgb(233, 153, 120)"
+  ha-color-primary-60: "rgb(240, 180, 155)"
+  ha-color-primary-70: "rgb(245, 200, 180)"
+  ha-color-primary-80: "rgb(248, 218, 205)"
+  ha-color-primary-90: "rgb(251, 234, 225)"
+  ha-color-primary-95: "rgb(253, 245, 240)"
+
+  # Neutral scale — warm grays
+  ha-color-neutral-00: "rgb(20, 20, 19)"
+  ha-color-neutral-05: "rgb(58, 57, 54)"
+  ha-color-neutral-10: "rgb(80, 78, 74)"
+  ha-color-neutral-20: "rgb(107, 105, 96)"
+  ha-color-neutral-30: "rgb(130, 128, 120)"
+  ha-color-neutral-40: "rgb(155, 153, 144)"
+  ha-color-neutral-50: "rgb(176, 174, 165)"
+  ha-color-neutral-60: "rgb(197, 195, 187)"
+  ha-color-neutral-70: "rgb(212, 210, 203)"
+  ha-color-neutral-80: "rgb(226, 224, 217)"
+  ha-color-neutral-90: "rgb(237, 235, 229)"
+  ha-color-neutral-95: "rgb(250, 249, 245)"
+
+  # Orange scale — for warning tokens
+  ha-color-orange-05: "rgb(101, 54, 25)"
+  ha-color-orange-10: "rgb(122, 66, 30)"
+  ha-color-orange-20: "rgb(152, 84, 38)"
+  ha-color-orange-30: "rgb(185, 105, 50)"
+  ha-color-orange-40: "rgb(217, 127, 68)"
+  ha-color-orange-50: "rgb(233, 155, 100)"
+  ha-color-orange-60: "rgb(240, 178, 135)"
+  ha-color-orange-70: "rgb(245, 200, 168)"
+  ha-color-orange-80: "rgb(248, 218, 198)"
+  ha-color-orange-90: "rgb(251, 235, 222)"
+  ha-color-orange-95: "rgb(253, 245, 238)"
+
+  # Red scale — for danger tokens
+  ha-color-red-05: "rgb(100, 28, 20)"
+  ha-color-red-10: "rgb(120, 34, 24)"
+  ha-color-red-20: "rgb(150, 43, 30)"
+  ha-color-red-30: "rgb(180, 52, 36)"
+  ha-color-red-40: "rgb(192, 57, 43)"
+  ha-color-red-50: "rgb(210, 80, 65)"
+  ha-color-red-60: "rgb(224, 112, 100)"
+  ha-color-red-70: "rgb(234, 148, 138)"
+  ha-color-red-80: "rgb(242, 186, 180)"
+  ha-color-red-90: "rgb(249, 218, 215)"
+  ha-color-red-95: "rgb(252, 238, 236)"
+
+  # Green scale — for success tokens
+  ha-color-green-05: "rgb(50, 68, 36)"
+  ha-color-green-10: "rgb(60, 82, 42)"
+  ha-color-green-20: "rgb(74, 100, 52)"
+  ha-color-green-30: "rgb(90, 122, 63)"
+  ha-color-green-40: "rgb(108, 146, 75)"
+  ha-color-green-50: "rgb(120, 140, 93)"
+  ha-color-green-60: "rgb(148, 170, 120)"
+  ha-color-green-70: "rgb(170, 192, 145)"
+  ha-color-green-80: "rgb(196, 214, 175)"
+  ha-color-green-90: "rgb(220, 234, 208)"
+  ha-color-green-95: "rgb(236, 244, 228)"
+
+
+  # -------------------------------------------------------------------
+  # 3. SEMANTIC TOKENS  (ha-color-*)
+  # -------------------------------------------------------------------
+
+  # Focus ring
+  ha-color-focus: "var(--ha-color-orange-60)"
+
+  # Text
+  ha-color-text-primary:   "var(--ha-color-neutral-05)"
+  ha-color-text-secondary: "var(--ha-color-neutral-30)"
+  ha-color-text-disabled:  "var(--ha-color-neutral-50)"
+  ha-color-text-link:      "var(--ha-color-primary-30)"
+
+  # Border — primary
+  ha-color-border-primary-quiet:  "var(--ha-color-primary-90)"
+  ha-color-border-primary-normal: "var(--ha-color-primary-70)"
+  ha-color-border-primary-loud:   "var(--ha-color-primary-40)"
+
+  # Border — neutral
+  ha-color-border-neutral-quiet:  "var(--ha-color-neutral-90)"
+  ha-color-border-neutral-normal: "var(--ha-color-neutral-60)"
+  ha-color-border-neutral-loud:   "var(--ha-color-neutral-40)"
+
+  # Border — danger
+  ha-color-border-danger-quiet:  "var(--ha-color-red-90)"
+  ha-color-border-danger-normal: "var(--ha-color-red-70)"
+  ha-color-border-danger-loud:   "var(--ha-color-red-40)"
+
+  # Border — warning
+  ha-color-border-warning-quiet:  "var(--ha-color-orange-90)"
+  ha-color-border-warning-normal: "var(--ha-color-orange-70)"
+  ha-color-border-warning-loud:   "var(--ha-color-orange-40)"
+
+  # Border — success
+  ha-color-border-success-quiet:  "var(--ha-color-green-90)"
+  ha-color-border-success-normal: "var(--ha-color-green-70)"
+  ha-color-border-success-loud:   "var(--ha-color-green-40)"
+
+  # Fill — primary
+  ha-color-fill-primary-quiet-resting:  "var(--ha-color-primary-95)"
+  ha-color-fill-primary-quiet-hover:    "var(--ha-color-primary-90)"
+  ha-color-fill-primary-quiet-active:   "var(--ha-color-primary-95)"
+  ha-color-fill-primary-normal-resting: "var(--ha-color-primary-90)"
+  ha-color-fill-primary-normal-hover:   "var(--ha-color-primary-80)"
+  ha-color-fill-primary-normal-active:  "var(--ha-color-primary-90)"
+  ha-color-fill-primary-loud-resting:   "var(--ha-color-primary-40)"
+  ha-color-fill-primary-loud-hover:     "var(--ha-color-primary-30)"
+  ha-color-fill-primary-loud-active:    "var(--ha-color-primary-40)"
+
+  # Fill — neutral
+  ha-color-fill-neutral-quiet-resting:  "var(--ha-color-neutral-95)"
+  ha-color-fill-neutral-quiet-hover:    "var(--ha-color-neutral-90)"
+  ha-color-fill-neutral-quiet-active:   "var(--ha-color-neutral-95)"
+  ha-color-fill-neutral-normal-resting: "var(--ha-color-neutral-90)"
+  ha-color-fill-neutral-normal-hover:   "var(--ha-color-neutral-80)"
+  ha-color-fill-neutral-normal-active:  "var(--ha-color-neutral-90)"
+  ha-color-fill-neutral-loud-resting:   "var(--ha-color-neutral-40)"
+  ha-color-fill-neutral-loud-hover:     "var(--ha-color-neutral-30)"
+  ha-color-fill-neutral-loud-active:    "var(--ha-color-neutral-40)"
+
+  # Fill — disabled
+  ha-color-fill-disabled-quiet-resting:  "var(--ha-color-neutral-95)"
+  ha-color-fill-disabled-normal-resting: "var(--ha-color-neutral-95)"
+  ha-color-fill-disabled-loud-resting:   "var(--ha-color-neutral-80)"
+
+  # Fill — danger
+  ha-color-fill-danger-quiet-resting:   "var(--ha-color-red-95)"
+  ha-color-fill-danger-quiet-hover:     "var(--ha-color-red-90)"
+  ha-color-fill-danger-quiet-active:    "var(--ha-color-red-95)"
+  ha-color-fill-danger-normal-resting:  "var(--ha-color-red-90)"
+  ha-color-fill-danger-normal-hover:    "var(--ha-color-red-80)"
+  ha-color-fill-danger-normal-active:   "var(--ha-color-red-90)"
+  ha-color-fill-danger-loud-resting:    "var(--ha-color-red-50)"
+  ha-color-fill-danger-loud-hover:      "var(--ha-color-red-40)"
+  ha-color-fill-danger-loud-active:     "var(--ha-color-red-50)"
+
+  # Fill — warning
+  ha-color-fill-warning-quiet-resting:  "var(--ha-color-orange-95)"
+  ha-color-fill-warning-quiet-hover:    "var(--ha-color-orange-90)"
+  ha-color-fill-warning-quiet-active:   "var(--ha-color-orange-95)"
+  ha-color-fill-warning-normal-resting: "var(--ha-color-orange-90)"
+  ha-color-fill-warning-normal-hover:   "var(--ha-color-orange-80)"
+  ha-color-fill-warning-normal-active:  "var(--ha-color-orange-90)"
+  ha-color-fill-warning-loud-resting:   "var(--ha-color-orange-70)"
+  ha-color-fill-warning-loud-hover:     "var(--ha-color-orange-50)"
+  ha-color-fill-warning-loud-active:    "var(--ha-color-orange-70)"
+
+  # Fill — success
+  ha-color-fill-success-quiet-resting:  "var(--ha-color-green-95)"
+  ha-color-fill-success-quiet-hover:    "var(--ha-color-green-90)"
+  ha-color-fill-success-quiet-active:   "var(--ha-color-green-95)"
+  ha-color-fill-success-normal-resting: "var(--ha-color-green-90)"
+  ha-color-fill-success-normal-hover:   "var(--ha-color-green-80)"
+  ha-color-fill-success-normal-active:  "var(--ha-color-green-90)"
+  ha-color-fill-success-loud-resting:   "var(--ha-color-green-50)"
+  ha-color-fill-success-loud-hover:     "var(--ha-color-green-40)"
+  ha-color-fill-success-loud-active:    "var(--ha-color-green-50)"
+
+  # On-color text — primary
+  ha-color-on-primary-quiet:  "var(--ha-color-primary-50)"
+  ha-color-on-primary-normal: "var(--ha-color-primary-40)"
+  ha-color-on-primary-loud:   "#ffffff"
+
+  # On-color text — neutral
+  ha-color-on-neutral-quiet:  "var(--ha-color-neutral-50)"
+  ha-color-on-neutral-normal: "var(--ha-color-neutral-40)"
+  ha-color-on-neutral-loud:   "#ffffff"
+
+  # On-color text — disabled
+  ha-color-on-disabled-quiet:  "var(--ha-color-neutral-80)"
+  ha-color-on-disabled-normal: "var(--ha-color-neutral-70)"
+  ha-color-on-disabled-loud:   "var(--ha-color-neutral-95)"
+
+  # On-color text — danger
+  ha-color-on-danger-quiet:  "var(--ha-color-red-50)"
+  ha-color-on-danger-normal: "var(--ha-color-red-40)"
+  ha-color-on-danger-loud:   "#ffffff"
+
+  # On-color text — warning
+  ha-color-on-warning-quiet:  "var(--ha-color-orange-50)"
+  ha-color-on-warning-normal: "var(--ha-color-orange-40)"
+  ha-color-on-warning-loud:   "#ffffff"
+
+  # On-color text — success
+  ha-color-on-success-quiet:  "var(--ha-color-green-50)"
+  ha-color-on-success-normal: "var(--ha-color-green-40)"
+  ha-color-on-success-loud:   "#ffffff"
+
+  # Surface
+  ha-color-surface-default:    "var(--ha-color-neutral-95)"
+  ha-color-on-surface-default: "var(--ha-color-neutral-05)"
+
+  # Scrollable fade overlay
+  ha-color-shadow-scrollable-fade: "rgba(20, 20, 19, 0.08)"
+
+
+  # -------------------------------------------------------------------
+  # 4. LEGACY VARIABLES
+  # -------------------------------------------------------------------
+
+  # Primary brand colors
+  primary-color:        "var(--ha-color-primary-40)"
+  dark-primary-color:   "var(--ha-color-primary-30)"
+  darker-primary-color: "var(--ha-color-primary-20)"
+  light-primary-color:  "var(--ha-color-primary-50)"
+  accent-color:         "var(--primary-color)"
+
+  # Text
+  primary-text-color:       "var(--ha-color-text-primary)"
+  secondary-text-color:     "var(--ha-color-text-secondary)"
+  text-primary-color:       "var(--claude-cream)"
+  text-light-primary-color: "var(--claude-ink)"
+  text-accent-color:        "var(--claude-cream)"
+  disabled-text-color:      "var(--ha-color-text-disabled)"
+  disabled-color:           "var(--ha-color-neutral-50)"
+
+  # RGB variants (used for rgba() opacity effects by HA and card mods)
+  rgb-primary-color:         "var(--claude-terra-rgb)"
+  rgb-accent-color:          "var(--claude-terra-rgb)"
+  rgb-primary-text-color:    "var(--claude-ink-rgb)"
+  rgb-secondary-text-color:  "130, 128, 120"
+  rgb-text-primary-color:    "var(--claude-ink-rgb)"
+  rgb-card-background-color: "var(--claude-cream-rgb)"
+  rgb-warning-color:         "217, 127, 68"
+  rgb-error-color:           "var(--claude-crimson-rgb)"
+  rgb-success-color:         "var(--claude-fern-rgb)"
+  rgb-info-color:            "var(--claude-sky-rgb)"
+
+  # Backgrounds
+  primary-background-color:   "var(--claude-cream)"
+  secondary-background-color: "var(--claude-linen)"
+  card-background-color:      "#ffffff"
+  clear-background-color:     "var(--card-background-color)"
+  lovelace-background:        "var(--primary-background-color)"
+
+  # Dividers and outlines
+  divider-color:      "rgba(var(--claude-ink-rgb), 0.10)"
+  outline-color:      "var(--claude-linen)"
+  outline-hover-color: "var(--claude-sand)"
+
+  # Status
+  error-color:   "var(--claude-crimson)"
+  warning-color: "var(--claude-terra)"
+  success-color: "var(--claude-fern)"
+  info-color:    "var(--claude-sky)"
+
+  # Cards
+  ha-card-background:    "var(--card-background-color)"
+  ha-card-border-radius: "12px"
+  ha-card-border-width:  "1px"
+  ha-card-border-color:  "var(--claude-linen)"
+  ha-card-box-shadow:    "0px 2px 8px rgba(var(--claude-ink-rgb), 0.07)"
+
+  # Dialogs
+  ha-dialog-border-radius: "12px"
+  dialog-backdrop-filter:  "none"
+
+  # Header
+  app-header-background-color:      "var(--primary-background-color)"
+  app-header-text-color:            "var(--primary-text-color)"
+  app-header-edit-background-color: "var(--secondary-background-color)"
+  app-header-edit-text-color:       "var(--primary-text-color)"
+
+  # Sidebar
+  sidebar-background-color:    "var(--primary-background-color)"
+  sidebar-text-color:          "var(--primary-text-color)"
+  sidebar-icon-color:          "var(--claude-stone)"
+  sidebar-selected-icon-color: "var(--claude-terra)"
+  sidebar-selected-text-color: "var(--claude-terra)"
+
+  # Scrollbar
+  scrollbar-thumb-color: "var(--claude-sand)"
+
+  # State and entity icons
+  state-icon-color:             "var(--claude-sand)"
+  state-icon-active-color:      "var(--claude-terra)"
+  state-icon-unavailable-color: "var(--ha-color-neutral-50)"
+  state-active-color:           "var(--claude-terra)"
+
+  # Entity state colors by domain
+  state-light-active-color:                   "var(--claude-terra)"
+  state-switch-active-color:                  "var(--claude-terra)"
+  state-binary_sensor-active-color:           "var(--claude-terra)"
+  state-cover-open-color:                     "var(--claude-sky)"
+  state-cover-garage-open-color:              "var(--claude-crimson)"
+  state-lock-unlocked-color:                  "var(--claude-crimson)"
+  state-climate-heat-color:                   "var(--claude-terra)"
+  state-climate-cool-color:                   "var(--claude-sky)"
+  state-climate-heat_cool-color:              "var(--claude-clay)"
+  state-media_player-inactive-color:          "var(--claude-stone)"
+  state-alarm_control_panel-armed_away-color: "var(--claude-crimson)"
+
+  # Switches and toggles
+  switch-checked-color:         "var(--claude-terra)"
+  switch-checked-button-color:  "#ffffff"
+  switch-checked-track-color:   "rgba(var(--claude-terra-rgb), 0.5)"
+  switch-unchecked-color:        "var(--claude-sand)"
+  switch-unchecked-button-color: "var(--claude-cream)"
+  switch-unchecked-track-color:  "var(--claude-sand)"
+
+  # Sliders
+  slider-color:           "var(--claude-terra)"
+  slider-secondary-color: "var(--claude-blush)"
+  slider-bar-color:       "var(--claude-linen)"
+  md-slider-inactive-track-color: "var(--claude-sand)"
+
+  # Input fields
+  input-fill-color:                    "rgba(var(--claude-ink-rgb), 0.04)"
+  input-ink-color:                     "var(--primary-text-color)"
+  input-label-ink-color:               "var(--secondary-text-color)"
+  input-idle-line-color:               "var(--primary-text-color)"
+  input-hover-line-color:              "var(--accent-color)"
+  input-disabled-line-color:           "var(--disabled-text-color)"
+  input-disabled-fill-color:           "var(--ha-color-neutral-90)"
+  input-disabled-ink-color:            "var(--disabled-text-color)"
+  input-disabled-label-ink-color:      "var(--disabled-text-color)"
+  input-outlined-idle-border-color:    "var(--disabled-text-color)"
+  input-outlined-hover-border-color:   "var(--disabled-text-color)"
+  input-outlined-focused-border-color: "var(--claude-terra)"
+  input-outlined-disabled-border-color: "var(--disabled-text-color)"
+  input-dropdown-icon-color:           "var(--secondary-text-color)"
+
+  # Ripple / Material effects
+  mdc-ripple-color:                 "var(--claude-terra)"
+  mdc-ripple-focus-opacity:         "0.12"
+  mdc-ripple-hover-opacity:         "0.06"
+  mdc-ripple-pressed-opacity:       "0.14"
+  mdc-linear-progress-buffer-color: "var(--ha-color-neutral-90)"
+
+  # Label badges
+  label-badge-red:              "var(--claude-crimson)"
+  label-badge-blue:             "var(--claude-sky)"
+  label-badge-green:            "var(--claude-fern)"
+  label-badge-yellow:           "#c9a227"
+  label-badge-grey:             "var(--secondary-text-color)"
+  label-badge-background-color: "var(--claude-cream)"
+  label-badge-text-color:       "var(--claude-stone)"
+
+  # Named color aliases (used by built-in integrations and dashboards)
+  red-color:         "var(--claude-crimson)"
+  pink-color:        "#c27ba0"
+  purple-color:      "#8e6bbf"
+  deep-purple-color: "#7c4fa0"
+  indigo-color:      "#5c6bc0"
+  blue-color:        "var(--claude-sky)"
+  light-blue-color:  "var(--claude-mist)"
+  cyan-color:        "#4db6ac"
+  teal-color:        "#26a69a"
+  green-color:       "var(--claude-fern)"
+  light-green-color: "var(--claude-sage)"
+  lime-color:        "#8bc34a"
+  yellow-color:      "#f0b429"
+  amber-color:       "#f59e0b"
+  orange-color:      "var(--claude-clay)"
+  deep-orange-color: "var(--claude-sienna)"
+  brown-color:       "#8d6e63"
+  light-grey-color:  "var(--claude-linen)"
+  grey-color:        "var(--claude-sand)"
+  dark-grey-color:   "var(--claude-stone)"
+  blue-grey-color:   "var(--dark-grey-color)"
+  black-color:       "var(--claude-ink)"
+  white-color:       "var(--claude-cream)"
+
+  # Material / Paper palette shims (older cards still reference these)
+  paper-grey-50:    "var(--claude-cream)"
+  paper-grey-200:   "var(--claude-linen)"
+  paper-grey-500:   "var(--claude-sand)"
+  paper-green-400:  "var(--claude-fern)"
+  paper-blue-400:   "var(--claude-sky)"
+  paper-orange-400: "var(--claude-terra)"
+
+  # Energy dashboard
+  energy-grid-consumption-color: "var(--claude-sky)"
+  energy-grid-return-color:      "var(--claude-ocean)"
+  energy-solar-color:            "var(--claude-terra)"
+  energy-non-fossil-color:       "var(--claude-fern)"
+  energy-battery-in-color:       "var(--claude-sage)"
+  energy-battery-out-color:      "var(--claude-fern)"
+  energy-home-color:             "var(--claude-fern)"
+  energy-car-color:              "var(--claude-sky)"
+  energy-water-color:            "var(--claude-mist)"
+  energy-gas-color:              "var(--claude-sienna)"
+
+
+  # -------------------------------------------------------------------
+  # 5. EXTRAS
+  # -------------------------------------------------------------------
+
+  # CodeMirror syntax highlighting (YAML / Jinja2 editor)
+  codemirror-keyword:    "var(--claude-terra)"
+  codemirror-operator:   "var(--claude-sky)"
+  codemirror-variable:   "var(--claude-ocean)"
+  codemirror-variable-2: "var(--claude-charcoal)"
+  codemirror-variable-3: "var(--claude-charcoal)"
+  codemirror-builtin:    "var(--claude-crimson)"
+  codemirror-atom:       "var(--claude-crimson)"
+  codemirror-number:     "var(--claude-sienna)"
+  codemirror-def:        "var(--claude-ink)"
+  codemirror-string:     "var(--claude-fern)"
+  codemirror-string-2:   "var(--claude-fern)"
+  codemirror-comment:    "var(--claude-sand)"
+  codemirror-tag:        "var(--claude-sky)"
+  codemirror-meta:       "var(--claude-sand)"
+  codemirror-attribute:  "var(--claude-terra)"
+  codemirror-property:   "var(--claude-sky)"
+  codemirror-qualifier:  "var(--claude-clay)"
+  codemirror-type:       "var(--claude-stone)"
+
+  # History / statistics graph colors (graph-color-1 is most prominent)
+  graph-color-1:  "var(--claude-terra)"
+  graph-color-2:  "var(--claude-sky)"
+  graph-color-3:  "var(--claude-fern)"
+  graph-color-4:  "var(--claude-sienna)"
+  graph-color-5:  "var(--claude-ocean)"
+  graph-color-6:  "var(--claude-sage)"
+  graph-color-7:  "var(--claude-clay)"
+  graph-color-8:  "var(--claude-crimson)"
+  graph-color-9:  "var(--claude-mist)"
+  graph-color-10: "var(--claude-grove)"
+  graph-color-11: "var(--claude-rust)"
+  graph-color-12: "var(--claude-blush)"
+  graph-color-13: "var(--claude-stone)"
+  graph-color-14: "var(--claude-sand)"
+
+
+  # -------------------------------------------------------------------
+  # 6. LIGHT & DARK MODE OVERRIDES
+  # -------------------------------------------------------------------
+
+  modes:
+
+    light:
+      # Backgrounds
+      primary-background-color:   "var(--claude-cream)"
+      secondary-background-color: "var(--claude-linen)"
+      card-background-color:      "#ffffff"
+      lovelace-background:        "var(--claude-cream)"
+      rgb-card-background-color:  "255, 255, 255"
+
+      # Text
+      primary-text-color:   "var(--claude-ink)"
+      secondary-text-color: "var(--claude-stone)"
+      disabled-text-color:  "var(--claude-sand)"
+
+      # Surfaces
+      ha-color-surface-default:    "var(--ha-color-neutral-95)"
+      ha-color-on-surface-default: "var(--ha-color-neutral-05)"
+
+      # Dividers and borders
+      divider-color:       "rgba(var(--claude-ink-rgb), 0.10)"
+      ha-card-border-color: "var(--claude-linen)"
+      outline-color:        "var(--claude-linen)"
+      outline-hover-color:  "var(--claude-sand)"
+
+      # Inputs
+      input-fill-color:      "rgba(var(--claude-ink-rgb), 0.04)"
+      input-idle-line-color: "rgba(var(--claude-ink-rgb), 0.42)"
+
+      # CodeMirror — darker text for light background
+      codemirror-variable-2: "var(--claude-charcoal)"
+      codemirror-def:        "var(--claude-ink)"
+      codemirror-comment:    "var(--claude-sand)"
+
+    dark:
+      # Backgrounds
+      primary-background-color:   "#1a1917"
+      secondary-background-color: "#232220"
+      card-background-color:      "#242220"
+      lovelace-background:        "#1a1917"
+      rgb-card-background-color:  "36, 34, 32"
+
+      # Text
+      primary-text-color:   "var(--claude-cream)"
+      secondary-text-color: "var(--claude-sand)"
+      disabled-text-color:  "var(--claude-stone)"
+
+      # Sidebar
+      sidebar-icon-color: "var(--claude-sand)"
+
+      # Surfaces
+      ha-color-surface-default:    "var(--ha-color-neutral-10)"
+      ha-color-on-surface-default: "var(--ha-color-neutral-95)"
+
+      # Semantic fill — primary (dark mode inverts to dark stops)
+      ha-color-fill-primary-quiet-resting:  "var(--ha-color-primary-05)"
+      ha-color-fill-primary-quiet-hover:    "var(--ha-color-primary-10)"
+      ha-color-fill-primary-quiet-active:   "var(--ha-color-primary-05)"
+      ha-color-fill-primary-normal-resting: "var(--ha-color-primary-10)"
+      ha-color-fill-primary-normal-hover:   "var(--ha-color-primary-20)"
+      ha-color-fill-primary-normal-active:  "var(--ha-color-primary-10)"
+
+      # Semantic fill — neutral
+      ha-color-fill-neutral-quiet-resting:  "var(--ha-color-neutral-05)"
+      ha-color-fill-neutral-quiet-hover:    "var(--ha-color-neutral-10)"
+      ha-color-fill-neutral-quiet-active:   "var(--ha-color-neutral-00)"
+      ha-color-fill-neutral-normal-resting: "var(--ha-color-neutral-10)"
+      ha-color-fill-neutral-normal-hover:   "var(--ha-color-neutral-20)"
+      ha-color-fill-neutral-normal-active:  "var(--ha-color-neutral-10)"
+
+      # Semantic fill — disabled
+      ha-color-fill-disabled-quiet-resting:  "var(--ha-color-neutral-10)"
+      ha-color-fill-disabled-normal-resting: "var(--ha-color-neutral-20)"
+      ha-color-fill-disabled-loud-resting:   "var(--ha-color-neutral-30)"
+
+      # Semantic fill — danger
+      ha-color-fill-danger-quiet-resting:   "var(--ha-color-red-05)"
+      ha-color-fill-danger-quiet-hover:     "var(--ha-color-red-10)"
+      ha-color-fill-danger-quiet-active:    "var(--ha-color-red-05)"
+      ha-color-fill-danger-normal-resting:  "var(--ha-color-red-10)"
+      ha-color-fill-danger-normal-hover:    "var(--ha-color-red-20)"
+      ha-color-fill-danger-normal-active:   "var(--ha-color-red-10)"
+      ha-color-fill-danger-loud-resting:    "var(--ha-color-red-40)"
+      ha-color-fill-danger-loud-hover:      "var(--ha-color-red-30)"
+      ha-color-fill-danger-loud-active:     "var(--ha-color-red-40)"
+
+      # Semantic fill — warning
+      ha-color-fill-warning-quiet-resting:  "var(--ha-color-orange-05)"
+      ha-color-fill-warning-quiet-hover:    "var(--ha-color-orange-10)"
+      ha-color-fill-warning-quiet-active:   "var(--ha-color-orange-05)"
+      ha-color-fill-warning-normal-resting: "var(--ha-color-orange-10)"
+      ha-color-fill-warning-normal-hover:   "var(--ha-color-orange-20)"
+      ha-color-fill-warning-normal-active:  "var(--ha-color-orange-10)"
+      ha-color-fill-warning-loud-resting:   "var(--ha-color-orange-40)"
+      ha-color-fill-warning-loud-hover:     "var(--ha-color-orange-30)"
+      ha-color-fill-warning-loud-active:    "var(--ha-color-orange-40)"
+
+      # Semantic fill — success
+      ha-color-fill-success-quiet-resting:  "var(--ha-color-green-05)"
+      ha-color-fill-success-quiet-hover:    "var(--ha-color-green-10)"
+      ha-color-fill-success-quiet-active:   "var(--ha-color-green-05)"
+      ha-color-fill-success-normal-resting: "var(--ha-color-green-10)"
+      ha-color-fill-success-normal-hover:   "var(--ha-color-green-20)"
+      ha-color-fill-success-normal-active:  "var(--ha-color-green-10)"
+      ha-color-fill-success-loud-resting:   "var(--ha-color-green-40)"
+      ha-color-fill-success-loud-hover:     "var(--ha-color-green-30)"
+      ha-color-fill-success-loud-active:    "var(--ha-color-green-40)"
+
+      # On-color text — dark mode uses lighter stops
+      ha-color-on-primary-quiet:   "var(--ha-color-primary-70)"
+      ha-color-on-primary-normal:  "var(--ha-color-primary-60)"
+      ha-color-on-neutral-quiet:   "var(--ha-color-neutral-70)"
+      ha-color-on-neutral-normal:  "var(--ha-color-neutral-60)"
+      ha-color-on-disabled-quiet:  "var(--ha-color-neutral-40)"
+      ha-color-on-disabled-normal: "var(--ha-color-neutral-50)"
+      ha-color-on-disabled-loud:   "var(--ha-color-neutral-50)"
+      ha-color-on-danger-quiet:    "var(--ha-color-red-70)"
+      ha-color-on-danger-normal:   "var(--ha-color-red-60)"
+      ha-color-on-warning-quiet:   "var(--ha-color-orange-70)"
+      ha-color-on-warning-normal:  "var(--ha-color-orange-60)"
+      ha-color-on-success-quiet:   "var(--ha-color-green-70)"
+      ha-color-on-success-normal:  "var(--ha-color-green-60)"
+
+      # Border overrides for dark mode
+      ha-color-border-neutral-quiet:  "var(--ha-color-neutral-40)"
+      ha-color-border-neutral-normal: "var(--ha-color-neutral-50)"
+      ha-color-border-neutral-loud:   "var(--ha-color-neutral-70)"
+
+      # Dividers, borders, outlines
+      divider-color:       "rgba(250, 249, 245, 0.08)"
+      ha-card-border-color: "#2e2c2a"
+      outline-color:        "#2e2c2a"
+      outline-hover-color:  "var(--claude-charcoal)"
+
+      # Inputs
+      input-fill-color:      "rgba(250, 249, 245, 0.05)"
+      input-idle-line-color: "rgba(250, 249, 245, 0.42)"
+
+      # CodeMirror — lighter text for dark background
+      codemirror-variable-2: "var(--claude-sand)"
+      codemirror-def:        "var(--claude-cream)"
+      codemirror-comment:    "var(--claude-stone)"
