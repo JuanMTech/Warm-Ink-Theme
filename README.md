@@ -55,7 +55,7 @@ Warm Ink draws its colors from a palette of warm grays, off-whites, and a burnt-
 3. Enter the repository URL, set the type to **Theme**, and click **Add**.
 4. Search for **Warm Ink** in HACS and click **Download**.
 5. Reload themes: go to **Developer Tools → Actions**, search for `frontend.reload_themes`, and run it.
-6. Open your [Profile settings](https://my.home-assistant.io/redirect/profile), scroll to **Browser Settings**, and select **Warm Ink** (light or dark) from the Theme dropdown.
+6. Open your [Profile settings](https://my.home-assistant.io/redirect/profile), under **User preferences**, select **Warm Ink** from the Theme dropdown.
 
 
 ### Manual Installation
@@ -73,7 +73,7 @@ Warm Ink draws its colors from a palette of warm grays, off-whites, and a burnt-
 
 4. Reload themes: **Developer Tools → Actions → `frontend.reload_themes`**.
 
-5. Open your [Profile settings](https://my.home-assistant.io/redirect/profile), scroll to **Browser Settings**, and select **Warm Ink** from the Theme dropdown.
+5. Open your [Profile settings](https://my.home-assistant.io/redirect/profile), under **User preferences**, select **Warm Ink** from the Theme dropdown.
 
 
 ## Light & Dark Mode
